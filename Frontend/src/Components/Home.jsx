@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Users, UserCheck, UserX, Clock, ArrowRight, UserPlus, Calendar, Mail, Phone } from "lucide-react";
+import { API_URL } from "../config";
 
 function Home() {
   const [stats, setStats] = useState({
@@ -15,7 +16,7 @@ function Home() {
   useEffect(() => {
     async function fetchStats() {
       try {
-        const res = await fetch("http://localhost:5001/user-api/users", {
+        const res = await fetch(`${API_URL}/user-api/users`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { User, Mail, Phone, Calendar, ArrowLeft, Check, ShieldAlert } from "lucide-react";
+import { API_URL } from "../config";
 
 function AddUser() {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ function AddUser() {
     };
 
     try {
-      const res = await fetch("http://localhost:5001/user-api/users", {
+      const res = await fetch(`${API_URL}/user-api/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

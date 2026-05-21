@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import User from "./User";
 import { Search, SlidersHorizontal, Grid, List, Mail, Phone, Calendar, Trash2, Edit2, AlertTriangle, X, Check, ShieldAlert } from "lucide-react";
+import { API_URL } from "../config";
 
 function UserList() {
   const [users, setUsers] = useState([]);
@@ -25,7 +26,7 @@ function UserList() {
   async function getUsers() {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/user-api/users", {
+      const res = await fetch(`${API_URL}/user-api/users`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +109,7 @@ function UserList() {
     };
 
     try {
-      const res = await fetch(`http://localhost:5001/user-api/users/${editingUser._id}`, {
+      const res = await fetch(`${API_URL}/user-api/users/${editingUser._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -133,7 +134,7 @@ function UserList() {
   // Handle Delete Confirmation
   const handleDeleteConfirm = async () => {
     try {
-      const res = await fetch(`http://localhost:5001/user-api/users/${deletingUser._id}`, {
+      const res = await fetch(`${API_URL}/user-api/users/${deletingUser._id}`, {
         method: "DELETE"
       });
 
