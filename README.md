@@ -16,25 +16,30 @@ A beautiful, premium, and fully-featured User Management web application built w
 
 ## 📂 Project Structure
 
+This project is separated into decoupled frontend and backend applications:
+
 ```text
-├── Backend/
+├── Backend/            # Express REST API (See Backend/README.md)
 │   ├── APIs/           # Express router endpoints
 │   ├── Models/         # Mongoose schema definitions
 │   ├── server.js       # Main server entrypoint
 │   ├── package.json    # Backend configuration and dependencies
 │   └── req.http        # Sample HTTP requests for quick API testing
 │
-├── Frontend/
+├── Frontend/           # React Single Page App (See Frontend/README.md)
 │   ├── src/            # React components, pages, hooks, and logic
-│   │   ├── components/ # Reusable UI components
+│   │   ├── Components/ # Reusable UI components
 │   │   ├── main.jsx    # Frontend entry point
 │   │   └── App.jsx     # Main App component with routing
 │   ├── index.html      # Vite standard HTML template
 │   ├── package.json    # Frontend configuration and packages
 │   └── vite.config.js  # Vite bundler configurations
 │
-└── README.md           # This premium landing page
+└── README.md           # Master root overview page
 ```
+
+> [!TIP]
+> For more granular technical specifications, please check out the dedicated **[Backend README](file:///Users/alampallypraneeth/Desktop/week-8-main/Backend/README.md)** and **[Frontend README](file:///Users/alampallypraneeth/Desktop/week-8-main/Frontend/README.md)** documents.
 
 ---
 
